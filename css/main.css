@@ -1,0 +1,195 @@
+* {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.text {
+  font-family: "Comfortaa", cursive;
+  color: black;
+  font-size: 30px;
+}
+
+.container-fluid {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.nav-link {
+  width: 100%;
+}
+
+.nav a {
+  display: inline-block;
+  width: 100%;
+  line-height: 70px;
+}
+
+.nav a span {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  background: black;
+  transition: transform 0.2s;
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+  color: white;
+}
+
+.nav a span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  content: attr(data-hover);
+  transition: background 0.5s;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0;
+  color: white;
+}
+
+.nav a:hover span,
+.nav a:focus span {
+  transform: rotateX(90deg) translateY(-22px);
+  width: 100%;
+}
+
+.nav a:hover span::before,
+.nav a:focus span::before {
+  background: white;
+  color: black;
+  width: 100%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate {
+  animation: rotation 10s infinite linear;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 90px;
+  font-family: "Comfortaa", cursive;
+  background: -webkit-linear-gradient(white, #002d3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 0;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeintext {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.fadeIn {
+  -webkit-animation: animat_show 0.8s;
+  animation: animat_show 0.8s;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#grad {
+  background-image: linear-gradient(white, black);
+}
+#grad2 {
+  background-image: linear-gradient(black, #171717);
+}
+#grad3 {
+  background-image: linear-gradient(#171717, black);
+}
+.darkmode {
+  background-color: black;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.aboutmetext {
+  color: white;
+  font-family: "Comfortaa", cursive;
+  font-size: 28px;
+  padding: 25px 75px 25px 75px;
+  text-align: left;
+  margin-top: 50px;
+  line-height: 1.6;
+}
+.buttonfix {
+  text-align: center;
+  width: 150px;
+  height: 75px;
+  background-color: black;
+  font-family: "Comfortaa", cursive;
+  font-size: 27px;
+  align-items: center;
+  line-height: 75px;
+}
+.aboutme {
+  text-align: center;
+  font-size: 90px;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  background: -webkit-linear-gradient(white, #002d3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#aboutme {
+  color: white;
+}
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.imgwidth {
+  width: 280px;
+}
+#mywork {
+  color: white;
+  font-family: "Comfortaa", cursive;
+  background: -webkit-linear-gradient(white, #002d3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 90px;
+}
